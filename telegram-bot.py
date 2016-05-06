@@ -21,9 +21,9 @@ def handle(msg):
 		bot.sendChatAction(chat_id, 'upload_photo')
 		cap = cv2.VideoCapture(0)
 		ret, frame = cap.read()
-		cv2.imwrite('images/default.jpg',frame)
+		cv2.imwrite('/tmp/default.jpg',frame)
 		cap.release()
-		result = bot.sendPhoto(chat_id, open('images/default.jpg', 'rb'), caption='Imagen desde la cámara.')
+		result = bot.sendPhoto(chat_id, open('/tmp/default.jpg', 'rb'), caption='Imagen desde la cámara.')
 	else:
 		bot.sendMessage(chat_id, 'Lo siento. No entendí tu mensaje.\nPuedes escribir el comando \'/help\' para obtener ayuda.')
 
