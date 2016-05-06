@@ -28,7 +28,7 @@ def handle(msg):
 		bot.sendMessage(chat_id, 'Lo siento. No entendí tu mensaje.\nPuedes escribir el comando \'/help\' para obtener ayuda.')
 
 bot = telepot.Bot('211389236:AAFvvA0oyQD31kfmmDvTWQN9F26T-Xd12ls')
-bot.notifyOnMessage(handle)
+bot.message_loop(handle)
 print 'Estoy escuchando...'
 
 while 1:
